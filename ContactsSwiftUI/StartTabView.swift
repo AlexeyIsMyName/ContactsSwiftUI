@@ -18,7 +18,7 @@ struct StartTabView: View {
                     Image(systemName: "person.3")
                     Text("Contacts")
                 }
-            NumbersView()
+            NumbersView(contacts: contacts)
                 .tabItem {
                     Image(systemName: "phone")
                         .accentColor(.green)

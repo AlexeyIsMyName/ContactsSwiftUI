@@ -19,7 +19,7 @@ struct ContactsView: View {
                     destination: ContactDetailsView(contact: contact)
                 )
             }
-            .navigationBarTitle("Contacts")
+            .navigationTitle("Contacts")
         }
     }
 }
