@@ -12,13 +12,16 @@ struct ContactDetailsView: View {
     let contact: Person
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
-            Text(contact.fullName)
-                .font(.largeTitle)
-            Text("Phone: \(contact.phoneNumber)")
-            Text("Email: \(contact.email)")
+        HStack {
+            VStack(alignment: .leading, spacing: 20) {
+                Text("Phone: \(contact.phoneNumber)")
+                Text("Email: \(contact.email)")
+                Spacer()
+            }
             Spacer()
         }
+        .navigationTitle(contact.fullName)
+        .padding()
     }
 }
 
