@@ -9,8 +9,7 @@ class DataManager {
     static let shared = DataManager()
     private init() {}
     
-    private var firstNames: [String] {
-        [
+    var firstNames = [
             "Liam",
             "Noah",
             "William",
@@ -22,10 +21,8 @@ class DataManager {
             "Mason",
             "Logan"
         ]
-    }
     
-    private var secondNames: [String] {
-        [
+    var secondNames = [
             "Smith",
             "Johnson",
             "Williams",
@@ -37,10 +34,8 @@ class DataManager {
             "Rodriguez",
             "Martinez"
         ]
-    }
     
-    private var emails: [String] {
-        [
+    var emails = [
             "7lindaek921@vcamp.co",
             "vfla.alkhaf@duybuy.com",
             "omehdi_219@icecold.shop",
@@ -52,10 +47,8 @@ class DataManager {
             "5ana.scorpion_prw@maechic.com",
             "fshankyr@dafam88.com"
         ]
-    }
     
-    private var phoneNumbers: [String] {
-        [
+    var phoneNumbers = [
             "857-449-2181",
             "702-326-9147",
             "858-822-5663",
@@ -67,26 +60,4 @@ class DataManager {
             "360-655-3692",
             "406-674-7885"
         ]
-    }
-    
-    func getPersonsList() -> [Person] {
-        var persons = [Person]()
-        
-        var firstNames = self.firstNames
-        var secondNames = self.secondNames
-        var phoneNumbers = self.phoneNumbers
-        var emails = self.emails
-        
-        let quantityPersons = min(firstNames.count, secondNames.count, phoneNumbers.count, emails.count)
-        
-        for index in 0..<quantityPersons {    
-            let rightIndex = quantityPersons - index - 1
-            persons.append(Person(firstName: firstNames.remove(at: Int.random(in: 0...rightIndex)),
-                                  secondName: secondNames.remove(at: Int.random(in: 0...rightIndex)),
-                                  email: emails.remove(at: Int.random(in: 0...rightIndex)),
-                                  phoneNumber: phoneNumbers.remove(at: Int.random(in: 0...rightIndex))))
-        }
-        
-        return persons
-    }
 }

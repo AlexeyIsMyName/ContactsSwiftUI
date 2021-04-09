@@ -27,6 +27,6 @@ struct ContactDetailsView: View {
 
 struct ContactDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        ContactDetailsView(contact: DataManager.shared.getPersonsList().first!)
+        ContactDetailsView(contact: Person.getContactList().first!)
     }
 }

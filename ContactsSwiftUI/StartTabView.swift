@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StartTabView: View {
     
-    private let contacts = DataManager.shared.getPersonsList()
+    private let contacts = Person.getContactList()
     
     var body: some View {
         TabView {
@@ -21,7 +21,6 @@ struct StartTabView: View {
             NumbersView(contacts: contacts)
                 .tabItem {
                     Image(systemName: "phone")
-                        .accentColor(.green)
                     Text("Numbers")
                 }
         }
