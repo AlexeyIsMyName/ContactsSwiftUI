@@ -8,18 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		E7ADEA142620CEAF00EAB632 /* ContactsSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ADEA132620CEAF00EAB632 /* ContactsSwiftUIApp.swift */; };
-		E7ADEA162620CEAF00EAB632 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ADEA152620CEAF00EAB632 /* ContentView.swift */; };
 		E7ADEA182620CEB100EAB632 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7ADEA172620CEB100EAB632 /* Assets.xcassets */; };
 		E7ADEA1B2620CEB100EAB632 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7ADEA1A2620CEB100EAB632 /* Preview Assets.xcassets */; };
+		E7ADEA272620CFAC00EAB632 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ADEA262620CFAC00EAB632 /* Person.swift */; };
+		E7ADEA2A2620CFB600EAB632 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ADEA292620CFB600EAB632 /* DataManager.swift */; };
+		E7ADEA2D2620D07100EAB632 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ADEA2C2620D07100EAB632 /* ContactsView.swift */; };
+		E7ADEA302620D0DF00EAB632 /* NumbersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ADEA2F2620D0DF00EAB632 /* NumbersView.swift */; };
+		E7ADEA342620D12B00EAB632 /* StartTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ADEA332620D12B00EAB632 /* StartTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E7ADEA102620CEAF00EAB632 /* ContactsSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactsSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7ADEA132620CEAF00EAB632 /* ContactsSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsSwiftUIApp.swift; sourceTree = "<group>"; };
-		E7ADEA152620CEAF00EAB632 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E7ADEA172620CEB100EAB632 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7ADEA1A2620CEB100EAB632 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E7ADEA1C2620CEB100EAB632 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7ADEA262620CFAC00EAB632 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		E7ADEA292620CFB600EAB632 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		E7ADEA2C2620D07100EAB632 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
+		E7ADEA2F2620D0DF00EAB632 /* NumbersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersView.swift; sourceTree = "<group>"; };
+		E7ADEA332620D12B00EAB632 /* StartTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +60,12 @@
 		E7ADEA122620CEAF00EAB632 /* ContactsSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				E7ADEA252620CF9800EAB632 /* Services */,
+				E7ADEA242620CF9100EAB632 /* Models */,
 				E7ADEA132620CEAF00EAB632 /* ContactsSwiftUIApp.swift */,
-				E7ADEA152620CEAF00EAB632 /* ContentView.swift */,
+				E7ADEA332620D12B00EAB632 /* StartTabView.swift */,
+				E7ADEA2C2620D07100EAB632 /* ContactsView.swift */,
+				E7ADEA2F2620D0DF00EAB632 /* NumbersView.swift */,
 				E7ADEA172620CEB100EAB632 /* Assets.xcassets */,
 				E7ADEA1C2620CEB100EAB632 /* Info.plist */,
 				E7ADEA192620CEB100EAB632 /* Preview Content */,
@@ -67,6 +79,22 @@
 				E7ADEA1A2620CEB100EAB632 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E7ADEA242620CF9100EAB632 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E7ADEA262620CFAC00EAB632 /* Person.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E7ADEA252620CF9800EAB632 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E7ADEA292620CFB600EAB632 /* DataManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +166,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7ADEA162620CEAF00EAB632 /* ContentView.swift in Sources */,
+				E7ADEA272620CFAC00EAB632 /* Person.swift in Sources */,
+				E7ADEA2A2620CFB600EAB632 /* DataManager.swift in Sources */,
+				E7ADEA302620D0DF00EAB632 /* NumbersView.swift in Sources */,
+				E7ADEA2D2620D07100EAB632 /* ContactsView.swift in Sources */,
 				E7ADEA142620CEAF00EAB632 /* ContactsSwiftUIApp.swift in Sources */,
+				E7ADEA342620D12B00EAB632 /* StartTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

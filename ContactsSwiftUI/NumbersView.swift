@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  NumbersView.swift
 //  ContactsSwiftUI
 //
 //  Created by ALEKSEY SUSLOV on 09.04.2021.
@@ -7,15 +7,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct NumbersView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Text("Hello, Numbers!")
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct NumbersView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        NumbersView()
     }
 }
