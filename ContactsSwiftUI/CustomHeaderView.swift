@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CustomFooterView: View {
+struct CustomHeaderView: View {
     
     let fullName: String
     
@@ -18,11 +18,6 @@ struct CustomFooterView: View {
                 startPoint: .leading,
                 endPoint: .trailing
             )
-            .overlay(
-                RoundedRectangle(cornerRadius: 4)
-                    .stroke(lineWidth: 1)
-                    .foregroundColor(.gray)
-            )
             
             HStack {
                 Text(fullName)
@@ -30,7 +25,6 @@ struct CustomFooterView: View {
                 Image(systemName: "person.circle")
             }
             .font(.headline)
-            .foregroundColor(.black)
             .padding(.horizontal)
         }
     }
@@ -38,6 +32,6 @@ struct CustomFooterView: View {
 
 struct CustomFooterView_Previews: PreviewProvider {
     static var previews: some View {
-        CustomFooterView(fullName: "Tim Cook")
+        CustomHeaderView(fullName: "Tim Cook")
     }
 }

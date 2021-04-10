@@ -18,6 +18,7 @@ struct CustomListRow: View {
             Text("\(text)")
                 .font(.subheadline)
         }
+        .padding(.horizontal)
     }
 }
 

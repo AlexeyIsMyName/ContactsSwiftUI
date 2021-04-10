@@ -14,13 +14,18 @@ struct NumbersView: View {
         NavigationView {
             List {
                 ForEach(contacts, id: \.fullName) { contact in
-                    Section(header: CustomFooterView(fullName: contact.fullName)) {
+                    Section(header: CustomHeaderView(fullName: contact.fullName)) {
                         CustomListRow(systemSymbolName: "phone", text: contact.phoneNumber)
                         CustomListRow(systemSymbolName: "envelope", text: contact.email)
                     }
+                    .listRowInsets(EdgeInsets(
+                        top: 0,
+                        leading: 0,
+                        bottom: 0,
+                        trailing: 0
+                    ))
                 }
             }
-//            .listStyle(InsetGroupedListStyle()) // как вариант
             .navigationTitle("Numbers")
         }
     }
