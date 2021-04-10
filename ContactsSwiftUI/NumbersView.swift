@@ -15,20 +15,12 @@ struct NumbersView: View {
             List {
                 ForEach(contacts, id: \.fullName) { contact in
                     Section(header: CustomFooterView(fullName: contact.fullName)) {
-                        HStack {
-                            Image(systemName: "phone")
-                                .foregroundColor(.blue)
-                            Text("\(contact.phoneNumber)")
-                        }
-                        HStack {
-                            Image(systemName: "envelope")
-                                .foregroundColor(.blue)
-                            Text("\(contact.email)")
-                        }
+                        CustomListRow(systemSymbolName: "phone", text: contact.phoneNumber)
+                        CustomListRow(systemSymbolName: "envelope", text: contact.email)
                     }
                 }
             }
-            .listStyle(InsetGroupedListStyle())
+//            .listStyle(InsetGroupedListStyle()) // как вариант
             .navigationTitle("Numbers")
         }
     }

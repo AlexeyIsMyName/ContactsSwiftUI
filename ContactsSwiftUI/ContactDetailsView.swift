@@ -12,16 +12,36 @@ struct ContactDetailsView: View {
     let contact: Person
     
     var body: some View {
-        HStack {
-            VStack(alignment: .leading, spacing: 20) {
-                Text("Phone: \(contact.phoneNumber)")
-                Text("Email: \(contact.email)")
-                Spacer()
+        List {
+            Section(header: PhoneHeaderView()) {
+                Text("\(contact.phoneNumber)")
             }
-            Spacer()
+            
+            Section(header: EmailHeaderView()) {
+                Text("\(contact.email)")
+            }
         }
+        .listStyle(InsetGroupedListStyle())
         .navigationTitle(contact.fullName)
-        .padding()
+        .navigationBarItems(trailing: Image(systemName: "person.circle"))
+    }
+}
+
+struct PhoneHeaderView: View {
+    var body: some View {
+        HStack {
+            Image(systemName: "phone")
+            Text("Phone number")
+        }
+    }
+}
+
+struct EmailHeaderView: View {
+    var body: some View {
+        HStack {
+            Image(systemName: "envelope")
+            Text("email")
+        }
     }
 }
 

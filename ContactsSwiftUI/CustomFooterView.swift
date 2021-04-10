@@ -19,21 +19,20 @@ struct CustomFooterView: View {
                 endPoint: .trailing
             )
             .overlay(
-                RoundedRectangle(cornerRadius: 5)
-                    .stroke(lineWidth: 2)
-                    .foregroundColor(.accentColor)
+                RoundedRectangle(cornerRadius: 4)
+                    .stroke(lineWidth: 1)
+                    .foregroundColor(.gray)
             )
             
             HStack {
                 Text(fullName)
-                    .font(.headline)
                 Spacer()
                 Image(systemName: "person.circle")
             }
+            .font(.headline)
             .foregroundColor(.black)
             .padding(.horizontal)
         }
-        
     }
 }
 
